@@ -29,8 +29,6 @@ div {
     border-radius: 1.1rem;
 }
 
-.report-title{
-}
 
 .report-title-text{
     background-color: inherit;
@@ -77,28 +75,34 @@ li{
 .report-block:nth-of-type(2){
     background-image: url(images/icon-work.svg);
     background-color: var(--Orange);
+    grid-area: work;
 }
 
 .report-block:nth-of-type(3){
     background-image: url(images/icon-play.svg);
     background-color: var(--Soft-blue);
+    grid-area: play;
 }
 
 .report-block:nth-of-type(4){
     background-image: url(images/icon-study.svg);
     background-color: var(--Light-red);
+    grid-area: study;
 }
 .report-block:nth-of-type(5){
     background-image: url(images/icon-exercise.svg);
     background-color: var(--Lime-green);
+    grid-area: exercise;
 }
 .report-block:nth-of-type(6){
     background-image: url(images/icon-social.svg);
     background-color: var(--Violet);
+    grid-area: social;
 }
 .report-block:nth-of-type(7){
     background-image: url(images/icon-self-care.svg);
     background-color: var(--Soft-orange);
+    grid-area: self-care;
 }
 
 
@@ -142,6 +146,7 @@ li{
 .report-nav{
     margin: 1.5rem;
     height: 12.7rem;
+    grid-area: nav;
 }
 
 .report-nav ul{
@@ -155,10 +160,77 @@ li{
     height: 8.25rem;
     display: flex;
     padding: 1.5rem;
-    grid-template-columns: auto auto;
-    
     align-items: center;
     background-color: var(--Blue);
+
+}
+
+@media screen and (min-width: 1170px){
+    .report-block, .report-nav{
+        margin: 0;
+    }
+
+    .report-block{
+        height: 100%;
+    }
+
+    
+
+    .report-info{
+        height: 82%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "subject settings" 
+        "time-spent time-spent"
+        "previous-time-spent previous-time-spent"
+        ;
+
+    }
+
+    .previous-time-spent{
+        justify-self: start;
+    }
+
+    .report-nav{
+        height: 100%;
+    }
+
+    .report-title{
+        padding: 1.5rem;
+        height: 68.5%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .report-title-text{
+        padding-left: 0;
+        margin: auto 0;
+    }
+
+    .report-title-text h1{
+        font-size: 2.1rem;
+    }
+
+    .report-nav ul{
+        margin-left: 2rem;
+        height: calc(100% - 68.5%);
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .report-nav li{
+        margin: 0;
+    }
+    
+    body{
+        height: 100vh;
+        padding: 13.7rem 8.8rem ;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 1fr 1fr;
+        gap: 1.65rem;
+        grid-template-areas: "nav work play study" "nav exercise social self-care";
+    }
 
 }
 
