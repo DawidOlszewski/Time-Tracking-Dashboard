@@ -1,4 +1,5 @@
 :root {
+    --Blue: hsl(246, 80%, 60%);
     --Light-red: hsl(15, 100%, 70%);
     --Soft-blue: hsl(195, 74%, 62%);
     --Light-red: hsl(348, 100%, 68%);
@@ -9,4 +10,53 @@
     --Dark-blue: hsl(235, 46%, 20%);
     --Desaturated-blue: hsl(235, 45%, 61%);
     --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+body{
+    background-color: var(--Very-dark-blue);
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+div {
+    background-color: var(--Dark-blue);
+    border-radius: 1.3rem;
+}
+
+.report-title{
+    background-color: var(--Blue);
+}
+
+.report-block{
+    margin: 1.5rem;
+    background-color: red;
+    height: 10rem;
+    display: flex;
+    align-items: flex-end;
+}
+.report-info{
+    height: 7.6rem;
+    flex-basis: 100%;
+}
+
+.report-nav{
+    margin: 1.5rem;
+}
+
+.report-nav ul{
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+li{
+    margin: 1.8rem;
+
 }
