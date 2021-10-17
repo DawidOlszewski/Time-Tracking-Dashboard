@@ -26,11 +26,40 @@ body{
 
 div {
     background-color: var(--Dark-blue);
-    border-radius: 1.3rem;
+    border-radius: 1.1rem;
 }
 
 .report-title{
-    background-color: var(--Blue);
+}
+
+.report-title-text{
+    background-color: inherit;
+    padding-left: 1rem;
+}
+
+h1{
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+span{
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    color: var(--Pale-blue);
+}
+
+li{
+    margin-top: 1.5rem;
+    font-size:1.1rem;
+    color: var(--Desaturated-blue);
+}
+
+.user-img{
+    border: 0.19rem white solid;
+    border-radius: 2rem;
+    width: 4rem;
+    grid-area: user_img;
 }
 
 .report-block{
@@ -41,22 +70,59 @@ div {
     align-items: flex-end;
 }
 .report-info{
+    padding: 1.5rem;
     height: 7.6rem;
     flex-basis: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    grid-template-areas: "subject settings" "time-spent previous-time-spent";
+}
+
+.subject{
+    grid-area: subject;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.time-spent{
+    grid-area: time-spent;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.previous-time-spent{
+    grid-area: previous-time-spent;
+    justify-self: end;
+    color: var(--Pale-Blue)
+}
+.settings{
+    grid-area: settings;
+    justify-self: end;
+
 }
 
 .report-nav{
     margin: 1.5rem;
+    height: 12.7rem;
 }
 
 .report-nav ul{
     list-style: none;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-li{
-    margin: 1.8rem;
+.report-title{
+    height: 8.25rem;
+    display: flex;
+    padding: 1.5rem;
+    grid-template-columns: auto auto;
+    
+    align-items: center;
+    background-color: var(--Blue);
 
 }
+
+
