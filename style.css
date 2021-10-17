@@ -10,6 +10,7 @@
     --Dark-blue: hsl(235, 46%, 20%);
     --Desaturated-blue: hsl(235, 45%, 61%);
     --Pale-Blue: hsl(236, 100%, 87%);
+    --hover-Blue: rgb(52, 57, 123);
 }
 
 *, *::after, *::before{
@@ -47,10 +48,19 @@ span{
     color: var(--Pale-blue);
 }
 
-li{
+li a{
     margin-top: 1.5rem;
     font-size:1.1rem;
     color: var(--Desaturated-blue);
+    text-decoration: none;
+}
+
+li a:focus, li a:hover{
+    color:white;
+}
+
+.li-marked{
+    color:white;
 }
 
 .user-img{
@@ -106,10 +116,6 @@ li{
 }
 
 
-
-
-
-
 .report-info{
     padding: 1.5rem;
     height: 7.6rem;
@@ -132,6 +138,8 @@ li{
     font-weight: 300;
 }
 
+
+
 .previous-time-spent{
     grid-area: previous-time-spent;
     justify-self: end;
@@ -140,7 +148,10 @@ li{
 .settings{
     grid-area: settings;
     justify-self: end;
+}
 
+.settings:hover{
+    filter:brightness(120%);
 }
 
 .report-nav{
@@ -150,10 +161,12 @@ li{
 }
 
 .report-nav ul{
+    height: calc(100% - 8.25rem);
     list-style: none;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
+    align-items: center;
 }
 
 .report-title{
@@ -182,9 +195,11 @@ li{
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: "subject settings" 
         "time-spent time-spent"
-        "previous-time-spent previous-time-spent"
-        ;
+        "previous-time-spent previous-time-spent";
+    }
 
+    .report-info:hover{
+        background-color: var(--hover-Blue);
     }
 
     .previous-time-spent{
@@ -215,6 +230,7 @@ li{
         margin-left: 2rem;
         height: calc(100% - 68.5%);
         flex-direction: column;
+        align-items: start;
         justify-content: space-evenly;
     }
 
