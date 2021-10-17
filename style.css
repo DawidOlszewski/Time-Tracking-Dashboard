@@ -1,6 +1,6 @@
 :root {
     --Blue: hsl(246, 80%, 60%);
-    --Light-red: hsl(15, 100%, 70%);
+    --Orange: hsl(15, 100%, 70%);
     --Soft-blue: hsl(195, 74%, 62%);
     --Light-red: hsl(348, 100%, 68%);
     --Lime-green: hsl(145, 58%, 55%);
@@ -64,11 +64,48 @@ li{
 
 .report-block{
     margin: 1.5rem;
-    background-color: red;
+    /* background-color: red; */
     height: 10rem;
     display: flex;
     align-items: flex-end;
+
+    /* background-image: url(images/icon-work.svg); */
+    background-repeat: no-repeat;
+    background-position: right top;
 }
+
+.report-block:nth-of-type(2){
+    background-image: url(images/icon-work.svg);
+    background-color: var(--Orange);
+}
+
+.report-block:nth-of-type(3){
+    background-image: url(images/icon-play.svg);
+    background-color: var(--Soft-blue);
+}
+
+.report-block:nth-of-type(4){
+    background-image: url(images/icon-study.svg);
+    background-color: var(--Light-red);
+}
+.report-block:nth-of-type(5){
+    background-image: url(images/icon-exercise.svg);
+    background-color: var(--Lime-green);
+}
+.report-block:nth-of-type(6){
+    background-image: url(images/icon-social.svg);
+    background-color: var(--Violet);
+}
+.report-block:nth-of-type(7){
+    background-image: url(images/icon-self-care.svg);
+    background-color: var(--Soft-orange);
+}
+
+
+
+
+
+
 .report-info{
     padding: 1.5rem;
     height: 7.6rem;
