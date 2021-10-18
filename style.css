@@ -56,7 +56,7 @@ li a{
 }
 
 li a:focus, li a:hover{
-    color:white;
+    color:rgb(206, 202, 202);
 }
 
 .li-marked{
