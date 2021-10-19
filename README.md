@@ -1,6 +1,8 @@
 # Time-Tracking-Dashboard
 *Challenge from Frontend Mentor*
 
+preview site : https://dawidolszewski.github.io/Time-Tracking-Dashboard
+
 I used here:
 * json data fetching
 * query string
